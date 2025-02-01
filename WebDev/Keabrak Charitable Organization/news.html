@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="img/keabrak .jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>News & Blog - Keabrak Charitable Organization</title>
+    <style>
+        h1 {
+            border: 2px solid #00ff37;
+            background-color: #00ff37;
+            padding: 10px;
+            border-radius: 50px;
+            text-align: center;
+            width: fit-content;
+            margin: auto;
+        }
+        .news-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .news-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .news-card img {
+            width: 100%;
+            height: auto;
+        }
+        .news-content {
+            padding: 15px;
+        }
+        .news-content h3 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .news-content p {
+            margin: 0 0 15px;
+            font-size: 1em;
+            color: #666;
+        }
+        .news-content a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        .news-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body id="news-page">
+    <nav>
+        <div class="navTop">
+            <div class="navItem">
+                <img src="img/keabrak .jpg" width="100px" alt="Keabrak Logo">
+            </div>
+        </div>
+        <div class="navBottom">
+            <a href="index.html" class="menuItem">HOME</a>
+            <a href="about.html" class="menuItem">ABOUT US</a>
+            <a href="work.html" class="menuItem">OUR WORK</a>
+            <a href="gallery.html" class="menuItem">GALLERY</a>
+            <a href="news.html" class="menuItem">NEWS/BLOG</a>
+            <a href="contact.html" class="menuItem">CONTACT US</a>
+        </div>
+        <span id="donateButton" class="Donate" onclick="window.location.href='./Donation/donate.html'">DONATE!</span>
+    </nav>
+    <main>
+        <h1>News & Blog</h1>
+        <div class="news-container">
+            <div class="news-card">
+                <img src="img/news/1.jpg" alt="News Image 1">
+                <div class="news-content">
+                    <h3>Empowering Women Through Entrepreneurship</h3>
+                    <p>Keabrak Charitable Organization recently launched a new initiative to empower women by providing entrepreneurship training and micro-loans...</p>
+                    <a href="news-details.html">Read More</a>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="img/news/2.jpg" alt="News Image 2">
+                <div class="news-content">
+                    <h3>Peacebuilding Workshop for Youth</h3>
+                    <p>Our peacebuilding workshop, held last week, brought together over 100 youth from diverse backgrounds to discuss and foster community harmony...</p>
+                    <a href="news-details.html">Read More</a>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="img/news/3.jpg" alt="News Image 3">
+                <div class="news-content">
+                    <h3>Community Health Awareness Program</h3>
+                    <p>As part of our commitment to health and nutrition, we organized a community awareness program to educate families on basic hygiene practices...</p>
+                    <a href="news-details.html">Read More</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="Donation.js"></script>
+</body>
+</html>

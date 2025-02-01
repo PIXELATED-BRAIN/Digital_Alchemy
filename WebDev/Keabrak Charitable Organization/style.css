@@ -1,0 +1,169 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #c9c4c4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* Logo in Top Left Corner */
+.navTop {
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: center;
+    padding: 10px 0;
+}
+
+.navItem img {
+    width: 100px;
+    height: auto;
+}
+
+/* Menu Items Styling */
+.navBottom {
+    display: flex;
+    justify-content: center; /* Menu items remain centered */
+    margin-top: 10px;
+}
+
+.menuItem {
+    color: green;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.menuItem:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* Main Section */
+main {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Header (h1) Styling */
+h1 {
+    padding: 20px;
+    background-color: #00ff37;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    width: fit-content;
+    margin: 20px auto;
+    font-weight: 700;
+}
+
+/* Contact Info Styling */
+main p {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Slider Styling */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Footer Styling (Optional) */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/* Donation Button Styling */
+#donateButton {
+    position: absolute; /* Position it absolute within the nav */
+    right: 20px; /* Align it to the left edge of the nav */
+    top: 60px; /* Place it at the bottom of the nav */
+    background-color: lightgreen; /* Choose a contrasting color for visibility */
+    color: green;
+    padding: 12px 20px;
+    font-weight: 700;
+    border: 1px solid green;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#donateButton:hover {
+    background-color: #cc7a00;
+}
+

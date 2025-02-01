@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="img/keabrak .jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extra styling/lightbox.css">
+    <title>Gallery - Keabrak Charitable Organization</title>
+    <style>
+    h1 {
+        border: 2px solid #00ff37;
+        background-color: #00ff37;
+        padding: 10px;
+        border-radius: 50px;
+        text-align: center;
+        width: fit-content;
+        margin: auto;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 20px;
+    }
+    .gallery img {
+        width: 100%; 
+        height: 200px;
+        object-fit: cover; 
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(61, 56, 56, 0.1);
+    }
+    body {
+        font-family: 'Lato', sans-serif;
+    }
+</style>
+
+    </style>
+</head>
+<body id="gallery-page">
+    <nav>
+        <div class="navTop">
+            <div class="navItem">
+                <img src="img/keabrak .jpg" width="100px" alt="Keabrak Logo">
+            </div>
+        </div>
+        <div class="navBottom">
+            <a href="index.html" class="menuItem">HOME</a>
+            <a href="about.html" class="menuItem">ABOUT US</a>
+            <a href="work.html" class="menuItem">OUR WORK</a>
+            <a href="gallery.html" class="menuItem">GALLERY</a>
+            <a href="news.html" class="menuItem">NEWS/BLOG</a>
+            <a href="contact.html" class="menuItem">CONTACT US</a>
+        </div>
+        <span id="donateButton" class="Donate" onclick="window.location.href='./Donation/donate.html'">DONATE!</span>
+    </nav>
+    <main>
+        <h1>Gallery</h1>
+        <div class="gallery">
+            <a href="img/gallery/IMG_20241229_055345_147.jpg" data-lightbox="GALLERY" data-title="">
+                <img src="img/gallery/IMG_20241229_055345_147.jpg" alt="Gallery Image 1">
+            </a>
+            <a href="img/gallery/IMG_20241229_055355_697.jpg" data-lightbox="GALLERY" data-title="">
+                <img src="img/gallery/IMG_20241229_055355_697.jpg" alt="Gallery Image 2">
+            </a>
+            <a href="img/gallery/IMG_20241229_055400_691.jpg" data-lightbox="GALLERY" data-title="">
+                <img src="img/gallery/IMG_20241229_055400_691.jpg" alt="Gallery Image 3">
+            </a>
+            <a href="img/gallery/IMG_20241229_055403_941.jpg" data-lightbox="GALLERY" data-title="">
+                <img src="img/gallery/IMG_20241229_055403_941.jpg" alt="Gallery Image 4">
+            </a>
+            <a href="img/gallery/IMG_20241229_134645_355.jpg"  data-lightbox="GALLERY" data-title="">
+                <img src="img/gallery/IMG_20241229_134645_355.jpg" alt="Gallery Image 5">
+            </a>
+            <a href="img/gallery/IMG_20241229_055411_751.jpg" data-lightbox="GALLERY" data-title="">
+                <img src="img/gallery/IMG_20241229_055411_751.jpg" alt="Gallery Image 6">
+            </a>
+            <a href="img/gallery/IMG_20241229_055415_783.jpg" data-lightbox="GALLERY" data-title="">
+                <img src="img/gallery/IMG_20241229_055415_783.jpg" alt="Gallery Image 7">
+            </a>
+            <a href="img/gallery/IMG_20241229_130926_022.jpg"data-lightbox="GALLERY" data-title="">
+                <img src="img/gallery/IMG_20241229_130926_022.jpg" alt="Gallery Image 8">
+            </a>
+            <a href="img/gallery/IMG_20241229_130936_778.jpg"data-lightbox="GALLERY" data-title="">
+                <img src="img/gallery/IMG_20241229_130936_778.jpg" alt="Gallery Image 9">
+            </a>
+            <a href="img/gallery/IMG_20241229_131111_527.jpg" data-lightbox="GALLERY" data-title="">
+                <img src="img/gallery/IMG_20241229_131111_527.jpg" alt="Gallery Image 10">
+            </a>
+            <a href="img/gallery/IMG_20241229_131145_170.jpg"  data-lightbox="GALLERY" data-title="">
+                <img src="img/gallery/IMG_20241229_131145_170.jpg" alt="Gallery Image 11">
+            </a>
+            <a href="img/gallery/IMG_20241229_134645_311.jpg"data-lightbox="GALLERY" data-title="">
+                <img src="img/gallery/IMG_20241229_134645_311.jpg" alt="Gallery Image 12">
+            </a>   
+        </div>
+    </main>
+    <script src="Donation.js"></script>
+    <script src="extra styling/lightbox-plus-jquery.js"></script>
+</body>
+</html>

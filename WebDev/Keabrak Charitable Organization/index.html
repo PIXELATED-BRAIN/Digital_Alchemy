@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="img/keabrak .jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Keabrak Charitable Organization</title>
+    <style>
+        h1 {
+            padding: 10px;
+            border-radius: 50px;
+            text-align: center;
+            width: fit-content;
+            margin: auto;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navTop">
+            <div class="navItem">
+                <img src="img/keabrak .jpg" width="100px" alt="Keabrak Logo">
+            </div>
+        </div>
+        <div class="navBottom">
+            <a href="index.html" class="menuItem">HOME</a>
+            <a href="about.html" class="menuItem">ABOUT US</a>
+            <a href="work.html" class="menuItem">OUR WORK</a>
+            <a href="gallery.html" class="menuItem">GALLERY</a>
+            <a href="news.html" class="menuItem">NEWS/BLOG</a>
+            <a href="contact.html" class="menuItem">CONTACT US</a>
+        </div>
+    </nav>
+    <main>
+        <h1>WELCOME TO KEABRAK CHARITABLE ORGANIZATION</h1>
+        <br>
+        <h2><i>WE STRIVE TO CREATE INCLUSIVE SOCIETIES AND EMPOWER INDIVIDUALS IN ETHIOPIA THROUGH SUSTAINABLE INITIATIVES.</i></h2>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="img/home/1.jpg" alt="Keabrak Charitable Work 1">
+                </div>
+                <div class="slide">
+                    <img src="img/home/2.jpg" alt="Keabrak Charitable Work 2">
+                </div>
+                <div class="slide">
+                    <img src="img/home/3.jpg" alt="Keabrak Charitable Work 3">
+                </div>
+                <div class="slide">
+                    <img src="img/home/4.jpg" alt="Keabrak Charitable Work 4">
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev" onclick="prevSlide()">❮</button>
+                <button class="next" onclick="nextSlide()">❯</button>
+            </div>
+        </div>
+    </main>
+    <span id="donateButton" class="Donate" onclick="window.location.href='./Donation/donate.html'">DONATE!</span>
+    <script>
+        let currentIndex = 0;
+
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            if (index >= totalSlides) currentIndex = 0;
+            if (index < 0) currentIndex = totalSlides - 1;
+
+            const slidesContainer = document.querySelector('.slides');
+            slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex++;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex--;
+            showSlide(currentIndex);
+        }
+        setInterval(nextSlide, 3000);
+
+        showSlide(currentIndex);
+    </script>
+    <p>&copy; Keabrak Charitable Organization</p>
+
+</body>
+</html>
