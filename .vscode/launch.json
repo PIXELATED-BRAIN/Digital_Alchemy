@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "DSA.Main",
+            "projectName": "digital alchemy_1a8b4c49"
+        },
+        {
+            "type": "java",
+            "name": "FluidSimulator",
+            "request": "launch",
+            "mainClass": "JAVA.FluidSimulator",
+            "projectName": "digital alchemy_1a8b4c49"
+        },
+        {
+            "type": "java",
             "name": "ExceptionHandling",
             "request": "launch",
             "mainClass": "ExceptionHandling",
