@@ -7,9 +7,9 @@ import java.util.ArrayList;
 public class FluidSimulator extends JPanel implements ActionListener {
     private final Timer timer;
     private final ArrayList<Particle> particles;
-    private final int width = 800;
-    private final int height = 600;
-    private final int particleCount = 666;
+    private final int width = 400;
+    private final int height = 300;
+    private final int particleCount = 10000;
 
     public FluidSimulator() {
         this.setPreferredSize(new Dimension(width, height));
