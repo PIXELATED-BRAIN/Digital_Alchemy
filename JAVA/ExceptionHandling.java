@@ -1,6 +1,8 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class ExceptionHandling {
     public static void main(String[] args) {
 
@@ -17,13 +19,13 @@ public class ExceptionHandling {
             System.out.println("result = " + result);
         }
         catch(ArithmeticException e){
-            System.out.println("can't divide a number by '0'!");
+            JOptionPane.showMessageDialog(null,"Can't Divide a Number by Zero", "Error!!",JOptionPane.ERROR_MESSAGE);
         }
         catch(InputMismatchException e){
-            System.out.println("you didn't Enter a number!");
+            JOptionPane.showMessageDialog(null,"You Didn't Enter a Number", "Error!!",JOptionPane.ERROR_MESSAGE);
         }
         catch(Exception e){
-            System.out.println("something went wrong!!");
+            JOptionPane.showMessageDialog(null,"something went wrong!!", "Error!!",JOptionPane.ERROR_MESSAGE);
         }
         finally{
             scanner.close();
