@@ -1,25 +1,46 @@
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.ArrayList;
 
-public class Main{
+public class Main {
     public static void main(String[] args) {
         
-        Stack<String> game = new Stack<String>();
+        LinkedList<Integer> linkedList = new LinkedList<Integer>();
+        ArrayList<Integer> arrayList = new ArrayList<Integer>();
 
-        //LIFO STRUCTURE
+        long startTime;
+        long endTime;
+        long elapsedTime;
 
-        game.push("SEKIRO");
-        game.push("ELDEN RING");
-        game.push("SUPER HOT");
-        game.push("FAR CRY 3");
+        for(int i = 0; i < 1000000; i++){
+            linkedList.add(i);
+            arrayList.add(i);
+        }
+                //LinkedList
 
-        System.out.println(game.empty());
+        startTime = System.nanoTime();
 
-        System.out.println(game);
+        linkedList.get(0);
+        //linkedList.get(500000);
+        //linkedList.get(999999);
 
-        //String myFavGame = game.pop();
+        endTime = System.nanoTime();
 
-        //System.out.println(myFavGame);
-        //System.out.println(game.peek());
-        //System.out.println(game.search("WITCHER"));
+        elapsedTime = endTime - startTime;
+
+        System.out.println("LinkedList: t " + "'" + elapsedTime + "'" + " ns");
+
+                //ArrayList
+
+        startTime = System.nanoTime();
+
+        arrayList.get(0);
+        //arrayList.get(500000);
+        //arrayList.get(999999);
+
+        endTime = System.nanoTime();
+
+        elapsedTime = endTime - startTime;
+
+        System.out.println("ArrayList: t " + "'" + elapsedTime + "'" + " ns");
     }
 }

@@ -3,7 +3,7 @@ package polymorphism;
 public class Luffy extends Attack {
 
     @Override
-   public void specialMove(){
+   public void Haki(){
         System.out.println("KING KONG GUN!!!");
     }
     

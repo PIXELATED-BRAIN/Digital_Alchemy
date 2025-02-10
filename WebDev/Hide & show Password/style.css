@@ -6,7 +6,7 @@
 }
 body
 {
-    background: #250035;
+    background: linear-gradient(45deg, #b11c1c, #109237);
     position: center;
 }
 .input-box{

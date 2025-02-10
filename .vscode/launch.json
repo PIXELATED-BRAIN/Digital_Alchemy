@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "elapsedTime",
+            "request": "launch",
+            "mainClass": "elapsedTime",
+            "projectName": "digital alchemy_1a8b4c49"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "DSA.Main",

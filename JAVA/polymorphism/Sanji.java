@@ -3,7 +3,7 @@ package polymorphism;
 public class Sanji extends Attack {
 
     @Override
-    public void specialMove(){
+    public void Haki(){
         System.out.println("DIABLO JANBE!!!");
     }
     

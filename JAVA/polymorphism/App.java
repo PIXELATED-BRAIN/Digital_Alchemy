@@ -12,7 +12,7 @@ public class App {
 
         for(Attack x : combinedAttack){
             
-            x.specialMove();
+            x.Haki();
 
         }
     }

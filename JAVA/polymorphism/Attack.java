@@ -2,7 +2,11 @@ package polymorphism;
 
 public class Attack{
 
-    public void specialMove() {
+    private void specialMove() {
        
+    }
+
+    public void Haki(){
+        specialMove();
     }
 }
