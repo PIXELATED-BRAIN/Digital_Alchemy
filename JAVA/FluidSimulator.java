@@ -52,6 +52,7 @@ public class FluidSimulator extends JPanel implements ActionListener {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.setResizable(false);
+        frame.setTitle("FluidSimulator");
     }
 
     static class Particle {
