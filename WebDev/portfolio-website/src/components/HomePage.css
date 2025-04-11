@@ -1,0 +1,55 @@
+nav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #111;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background-color: #f4f4f4;
+}
+
+.hero-photo {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.hero-description {
+  max-width: 600px;
+}
+
+.hero-description h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.hero-description p {
+  font-size: 1.2em;
+  color: #666;
+}
