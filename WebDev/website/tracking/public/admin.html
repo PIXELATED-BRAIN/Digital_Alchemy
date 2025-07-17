@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpressTrack - Admin Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <i class="fas fa-shipping-fast logo-icon"></i>
+                    <h1>ExpressTrack</h1>
+                </a>
+                <div class="nav-tabs">
+                    <a href="/" class="tab-btn">
+                        <i class="fas fa-box"></i> Track Delivery
+                    </a>
+                    <button class="tab-btn active">
+                        <i class="fas fa-user-shield"></i> Admin Panel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div id="admin-login-section">
+            <div class="login-container">
+                <div class="login-logo">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h2 class="login-title">Admin Login</h2>
+                
+                <div class="form-group">
+                    <label for="admin-username">Username</label>
+                    <input type="text" id="admin-username" placeholder="Enter admin username">
+                </div>
+                
+                <div class="form-group">
+                    <label for="admin-password">Password</label>
+                    <input type="password" id="admin-password" placeholder="Enter admin password">
+                </div>
+                
+                <button class="btn btn-primary" id="admin-login-btn" style="width: 100%;">
+                    <i class="fas fa-sign-in-alt"></i> Login to Admin Panel
+                </button>
+            </div>
+        </div>
+        
+        <div id="admin-panel" class="admin-panel" style="display: none;">
+            <div class="card">
+                <h2 class="card-title"><i class="fas fa-tachometer-alt"></i> Admin Dashboard</h2>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <div>
+                        <h3 style="margin-bottom: 5px;">Welcome, Admin</h3>
+                        <p style="color: var(--gray);">Manage deliveries and track packages</p>
+                    </div>
+                    <button class="btn btn-danger" id="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+                
+                <div class="admin-controls">
+                    <div class="form-group">
+                        <label for="recipient-name">Recipient Name</label>
+                        <input type="text" id="recipient-name" placeholder="Enter recipient name">
+                    </div>
+                    <div class="form-group">
+                        <label for="delivery-address">Delivery Address</label>
+                        <textarea id="delivery-address" placeholder="Enter full delivery address" rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="package-type">Package Type</label>
+                        <select id="package-type">
+                            <option value="Document">Document</option>
+                            <option value="Parcel">Parcel</option>
+                            <option value="Box">Box</option>
+                            <option value="Pallet">Pallet</option>
+                            <option value="Fragile">Fragile Item</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="btn btn-success" id="create-delivery-btn">
+                    <i class="fas fa-plus"></i> Create New Delivery
+                </button>
+                
+                <div style="margin: 40px 0 20px; display: flex; align-items: center; gap: 15px;">
+                    <div style="height: 1px; background: var(--border); flex-grow: 1;"></div>
+                    <div style="font-weight: 500; color: var(--gray);">Delivery Management</div>
+                    <div style="height: 1px; background: var(--border); flex-grow: 1;"></div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h3><i class="fas fa-list"></i> Active Deliveries</h3>
+                    <div>
+                        <button class="btn btn-primary" id="refresh-deliveries">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="delivery-list">
+                    <div class="delivery-header">
+                        <div>Tracking Number</div>
+                        <div>Recipient</div>
+                        <div>Status</div>
+                        <div>Actions</div>
+                    </div>
+                    
+                    <div id="deliveries-container">
+                        <!-- Deliveries will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ExpressTrack Delivery System. All rights reserved.</p>
+            <p>Designed for secure and efficient package tracking</p>
+        </div>
+    </footer>
+    
+    <div id="notification" class="notification">
+        <i class="fas fa-check-circle"></i>
+        <div class="notification-content"></div>
+    </div>
+    
+    <script src="/js/admin.js"></script>
+</body>
+</html>

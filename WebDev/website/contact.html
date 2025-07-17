@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMA Express - Shipping Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container main-header">
+            <a href="#" class="logo" onclick="showPage('home')">
+                <div>
+                    <img src='design_elements/logo.png' alt='logo' style='width: 50px; height: 50px;'   >
+                </div>
+                <h1>AMA <span>Express</span></h1>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Place this inside .main-header, after the nav -->
+           <div class="track-btn-wrapper">
+               <a href="tracking/public/index.html" class="btn track-btn">Track Delivery</a>
+           </div>
+            
+        </div>
+    </header>
+    
+    <!-- Contact Section -->
+    <section class="contact-section">
+        
+        <div class="contact-content">
+            <!-- Contact Info Section -->
+            <div class="contact-info animate">
+                <div class="contact-info-container">
+                    <div class="contact-info-box" tabindex="0">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Headquarters</h4>
+                            <p>HMM building 1'st floor, Wollo Sefer, Addis Ababa, Ethiopia</p>
+                            <button class="map-link">
+                                <i class="fas fa-map"></i> View on Map
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-box" tabindex="0">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+251911123456">+251 912 383 845</a></p>
+                            <p><a href="tel:+251911789012">+251 912 383 850</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-box" tabindex="0">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@amashipping.com">info@amashipping.com</a></p>
+                            <p><a href="mailto:support@amashipping.com">support@amashipping.com</a></p>
+                        </div>
+                    </div>
+                    
+
+                    </div>
+                </div>
+                
+                <!-- Social Media Section -->
+                <div class="social-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com/amashippingtarget="_blank" aria-label="Facebook" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/amashipping" target="_blank" aria-label="Twitter" class="social-btn"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/in/amashipping" target="_blank" aria-label="LinkedIn" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/amashippinget" target="_blank" aria-label="Instagram" class="social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/amashipping" target="_blank" aria-label="YouTube" class="social-btn"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form Section -->
+            <div class="contact-form animate delay-1">
+                <h3>Send us a message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" required placeholder="Enter your full name">
+                        <span class="focus-border"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" required placeholder="Enter your email">
+                        <span class="focus-border"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="Optional phone number">
+                        <span class="focus-border"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" required placeholder="What's this about?">
+                        <span class="focus-border"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" required placeholder="Your message here..." maxlength="500"></textarea>
+                        <span class="focus-border"></span>
+                        <div class="character-count"><span id="charCount">0</span>/500 characters</div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="send-btn">
+                            <span class="btn-text">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="form-status success">
+                        <i class="fas fa-check-circle"></i> Your message has been sent successfully!
+                    </div>
+                    
+                    <div class="form-status error">
+                        <i class="fas fa-exclamation-circle"></i> Please fill in all required fields.
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="contact-footer">
+            <p>© 2025 AMA Express. All rights reserved. | Designed by ACEZCREATOR</p>
+        </div>
+    </section>
+
+    <script>
+        // Navigation function
+        function showPage(pageName) {
+            // Redirect to the corresponding HTML file
+            if (pageName === 'home') {
+                window.location.href = 'index.html';
+            } else if (pageName === 'services') {
+                window.location.href = 'services.html';
+            } else if (pageName === 'about') {
+                window.location.href = 'about.html';
+            } else if (pageName === 'contact') {
+                window.location.href = 'contact.html';
+            }
+            return false;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation on scroll
+            const animateElements = document.querySelectorAll('.animate');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // Form submission handling
+            const contactForm = document.getElementById('contactForm');
+            const successMessage = document.querySelector('.form-status.success');
+            const errorMessage = document.querySelector('.form-status.error');
+            const charCount = document.getElementById('charCount');
+            const messageInput = document.getElementById('message');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const subject = document.getElementById('subject').value;
+                    const message = messageInput.value;
+                    
+                    // Simple validation
+                    if (name && email && subject && message) {
+                        // Here you would typically send the form data to a server
+                        console.log('Form submitted:', { name, email, subject, message });
+                        
+                        // Show success message
+                        successMessage.style.display = 'block';
+                        errorMessage.style.display = 'none';
+                        
+                        // Reset form after 2 seconds
+                        setTimeout(() => {
+                            contactForm.reset();
+                            successMessage.style.display = 'none';
+                            charCount.textContent = '0';
+                        }, 3000);
+                    } else {
+                        // Show error message
+                        errorMessage.style.display = 'block';
+                        successMessage.style.display = 'none';
+                        
+                        // Hide error after 3 seconds
+                        setTimeout(() => {
+                            errorMessage.style.display = 'none';
+                        }, 3000);
+                    }
+                });
+            }
+            
+            // Character count for message
+            if (messageInput) {
+                messageInput.addEventListener('input', function() {
+                    charCount.textContent = messageInput.value.length;
+                });
+            }
+            
+            // Add click effect to contact info boxes
+            const contactBoxes = document.querySelectorAll('.contact-info-box');
+            contactBoxes.forEach(box => {
+                box.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 200);
+                });
+                
+                // Keyboard accessibility
+                box.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        this.click();
+                    }
+                });
+            });
+            
+            // Map link functionality
+            const mapLink = document.querySelector('.map-link');
+            if (mapLink) {
+                mapLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.open('https://maps.app.goo.gl/ydB6VLfAy7uaz8my9', '_blank');
+                });
+            }
+            
+            // Phone number formatting
+            const phoneInput = document.getElementById('phone');
+            if (phoneInput) {
+                phoneInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 3 && value.length <= 6) {
+                        value = value.replace(/(\d{3})(\d{1,3})/, '$1 $2');
+                    } else if (value.length > 6) {
+                        value = value.replace(/(\d{3})(\d{3})(\d{1,4})/, '$1 $2 $3');
+                    }
+                    e.target.value = value;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

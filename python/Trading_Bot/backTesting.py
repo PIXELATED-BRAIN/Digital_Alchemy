@@ -5,6 +5,7 @@ import talib
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
 import pytz
+import json
 
 # Initialize Binance
 exchange = ccxt.binance({
@@ -44,7 +45,9 @@ def fetch_historical_data():
                 break
             since = data[-1][0] + 1  # Next candle
             all_ohlcv += data
-            
+            f = open("data.json", "w")
+            f.write(str(data))
+
             # Progress indicator
             current_date = pd.to_datetime(data[-1][0], unit='ms')
             print(f"Fetched data up to: {current_date}", end='\r')
@@ -54,11 +57,12 @@ def fetch_historical_data():
             time.sleep(5)
             continue
     
-    df = pd.DataFrame(all_ohlcv, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume'])
+    df = pd.DataFrame(f, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume'])
     df['timestamp'] = pd.to_datetime(df['timestamp'], unit='ms')
     df = df[(df['timestamp'] >= pd.Timestamp(config['backtest_start'])) & 
             (df['timestamp'] <= pd.Timestamp(config['backtest_end']))]
     print("\nData fetch complete!")
+    f.close()
     return df
 
 def calculate_indicators(df):

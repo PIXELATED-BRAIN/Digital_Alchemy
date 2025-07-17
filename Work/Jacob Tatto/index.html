@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob | Dark Illustrative Tattoo Artist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">JACOB BLACK</a>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#booking">Consultation</a></li>
+                <li><a href="#faq">Information</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1>DARK ILLUSTRATIVE TATTOO ARTISTRY</h1>
+            <p class="hero-subtitle">Precision work in black and gray since 2015</p>
+            <a href="#booking" class="btn-primary">Request Consultation</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="jacob-portrait.jpg" alt="Jacob Black, Tattoo Artist">
+                </div>
+                <div class="about-text">
+                    <h2>THE ARTIST</h2>
+                    <p class="about-intro">Jacob Black specializes in dark illustrative tattoos, blending classical art techniques with modern tattoo craftsmanship.</p>
+                    <div class="specialties">
+                        <div class="specialty-item">
+                            <i class="fas fa-drafting-compass"></i>
+                            <h4>Precision Detailing</h4>
+                            <p>Fine line work and intricate shading</p>
+                        </div>
+                        <div class="specialty-item">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h4>Custom Designs</h4>
+                            <p>Unique artwork created for each client</p>
+                        </div>
+                        <div class="specialty-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Sterile Environment</h4>
+                            <p>Medical-grade safety protocols</p>
+                        </div>
+                    </div>
+                    <p class="studio-info">Currently accepting select clients at <strong>Black Veil Studio</strong> in Portland, Oregon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>PORTFOLIO</h2>
+            <div class="portfolio-grid" id="portfolioContainer">
+                <!-- Portfolio items will be populated by JavaScript -->
+            </div>
+            <div class="portfolio-cta">
+                <p>View complete portfolio on Instagram</p>
+                <a href="#" class="btn-secondary">@JacobBlackTattoo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2>CONSULTATION REQUEST</h2>
+            <div class="booking-process">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Initial Inquiry</h3>
+                        <p>Complete the consultation form with your tattoo concept and placement details.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Design Phase</h3>
+                        <p>Custom artwork is created based on your consultation (2-4 weeks).</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Tattoo Session</h3>
+                        <p>In-person appointment scheduled upon design approval ($200/hour).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <form id="bookingForm" class="consultation-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="concept">Tattoo Concept</label>
+                    <textarea id="concept" rows="4" placeholder="Describe your tattoo idea in detail..." required></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="placement">Body Placement</label>
+                        <select id="placement" required>
+                            <option value="">Select placement</option>
+                            <option>Arm (Upper/Lower)</option>
+                            <option>Leg (Upper/Lower)</option>
+                            <option>Chest/Back</option>
+                            <option>Hands/Neck/Face</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="size">Approximate Size</label>
+                        <select id="size" required>
+                            <option value="">Select size</option>
+                            <option>Small (under 3")</option>
+                            <option>Medium (3-6")</option>
+                            <option>Large (6-12")</option>
+                            <option>Extra Large (12"+)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-footer">
+                    <p class="disclaimer">A $100 deposit is required to begin the design process. This amount will be applied toward your final session cost.</p>
+                    <button type="submit" class="btn-primary">Submit Consultation Request</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>INFORMATION</h2>
+            <div class="faq-container">
+                <div class="faq-column">
+                    <h3>Studio Policies</h3>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Deposit Requirements</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>A non-refundable $100 deposit is required to secure your appointment and begin the design process. This deposit is applied toward your final session cost.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Cancellation Policy</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We require 72 hours notice for appointment cancellations. Late cancellations will forfeit the deposit and require a new deposit to reschedule.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-column">
+                    <h3>Pricing</h3>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Hourly Rate</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>$200/hour with a 3-hour minimum for new clients. Large-scale pieces may be quoted as a flat rate.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Design Fees</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Custom design work is included in the hourly rate. Complex designs requiring extensive drawing time may require additional design fees.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-column">
+                    <h3>Aftercare</h3>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Healing Process</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Proper healing takes 2-4 weeks. You'll receive detailed aftercare instructions and recommended products after your session.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Touch-Ups</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Minor touch-ups within 3 months of your session are complimentary. Significant changes or additions will be charged at the standard rate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BLACK VEIL STUDIO</h3>
+                    <address>
+                        123 Artisan Way<br>
+                        Portland, OR 97209<br>
+                        United States
+                    </address>
+                </div>
+                <div class="footer-section">
+                    <h3>CONTACT</h3>
+                    <p>
+                        <a href="mailto:booking@jacobblacktattoo.com">booking@jacobblacktattoo.com</a><br>
+                        (503) 555-0199 (text preferred)
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Portfolio"><i class="fas fa-camera-retro"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>HOURS</h3>
+                    <p>
+                        Wednesday - Saturday<br>
+                        11:00 AM - 7:00 PM<br>
+                        By appointment only
+                    </p>
+                    <a href="#booking" class="btn-secondary">Book Consultation</a>
+                </div>
+            </div>
+            <div class="footer-legal">
+                <p>&copy; <span id="current-year"></span> Jacob Tattoo. All rights reserved.</p>
+                <p>Must be 18+ with valid ID. No minors permitted in studio.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
